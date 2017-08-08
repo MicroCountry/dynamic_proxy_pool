@@ -28,6 +28,9 @@ class RedisClient(object):
     def delete(self,key):
         self.__conn.hdel(self.name, key)
 
+    def inckey(self, key, value):
+        self.__conn.hincrby(self.name, key, value)
+
     def getAll(self):
         return self.__conn.hgetall(self.name).keys()
 

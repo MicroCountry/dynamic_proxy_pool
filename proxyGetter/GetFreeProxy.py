@@ -7,6 +7,7 @@ sys.setdefaultencoding('utf-8')
 
 from util.utilFunction import robustCrawl,getHtmlTree
 from util.WebRequest import WebRequest
+requests.packages.urllib3.disable_warnings()
 
 class GeteFreeProxy(object):
     def __init__(self):
